@@ -11,17 +11,11 @@ const add = (x, y) => x + y
 
 // 🔚 SETUP
 
-performance.mark('start')
+performance.mark('start');
 
 // EXERCISE 💪
 
-while (iterations--) {
-  add(a, b)
-}
-
-iterations = 1
-
-// add('foo' + 'bar')
+%NeverOptimizeFunction(add)
 
 while (iterations--) {
   add(a, b)
