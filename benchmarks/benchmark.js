@@ -4,13 +4,7 @@ const { performance } = require('perf_hooks')
 
 let iterations = 1e6
 
-class Point {
-  constructor(x, y, z) {
-    this.x = x
-    this.y = y
-    this.z = z
-  }
-}
+const objects = [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]
 
 // 🔚 SETUP
 
@@ -19,10 +13,9 @@ performance.mark('start')
 // EXERCISE 💪
 
 while (iterations--) {
-  const point = new Point(2, 4, 6)
-  delete point.z
-
-  JSON.stringify(point)
+  let sum = 0
+  const obj = objects[iterations & 3]
+  sum = sum + obj.a
 }
 
 // 🔚 EXERCISE
