@@ -19,6 +19,8 @@ while (iterations--) {
   add(a, b)
 }
 
+iterations = 1
+
 // add('foo' + 'bar')
 
 while (iterations--) {
