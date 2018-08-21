@@ -20,7 +20,7 @@ performance.mark('start')
 
 while (iterations--) {
   const point = new Point(2, 4, 6)
-  point.x = undefined
+  delete point.z
 
   JSON.stringify(point)
 }
