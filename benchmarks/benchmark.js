@@ -19,6 +19,8 @@ while (iterations--) {
   add(a, b)
 }
 
+add('foo' + 'bar')
+
 // 🔚 EXERCISE
 
 performance.mark('end')
