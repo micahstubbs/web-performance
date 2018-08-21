@@ -19,6 +19,7 @@ performance.mark('start')
 
 while (iterations--) {
   const point = new Point(2, 4)
+  point.y = undefined
 
   JSON.stringify(point)
 }
