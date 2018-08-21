@@ -19,7 +19,11 @@ while (iterations--) {
   add(a, b)
 }
 
-add('foo' + 'bar')
+// add('foo' + 'bar')
+
+while (iterations--) {
+  add(a, b)
+}
 
 // 🔚 EXERCISE
 
