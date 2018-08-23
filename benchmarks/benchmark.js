@@ -2,9 +2,7 @@ const { performance } = require('perf_hooks')
 
 // SETUP 🏁
 
-let iterations = 1e6
-
-const objects = [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]
+let iterations = 1e5
 
 // 🔚 SETUP
 
@@ -12,10 +10,17 @@ performance.mark('start')
 
 // EXERCISE 💪
 
-while (iterations--) {
-  let sum = 0
-  const obj = objects[iterations & 3]
-  sum = sum + obj.a
+const test = () => {
+  const add = point => point.x + point.y
+  class Point {
+    constructor(x, y) {
+      this.x = x
+      this.y = y
+    }
+  }
+
+  const point = new Point(10, 20)
+  add(point)
 }
 
 // 🔚 EXERCISE
