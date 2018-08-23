@@ -9,15 +9,15 @@ let iterations = 1e5
 performance.mark('start')
 
 // EXERCISE 💪
+class Point {
+  constructor(x, y) {
+    this.x = x
+    this.y = y
+  }
+}
 
 const test = () => {
   const add = point => point.x + point.y
-  class Point {
-    constructor(x, y) {
-      this.x = x
-      this.y = y
-    }
-  }
 
   const point = new Point(10, 20)
   add(point)
